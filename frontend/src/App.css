@@ -1,0 +1,185 @@
+:root {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f4f6ff 0%, #ffffff 45%, #fdfdfd 100%);
+  padding: 2rem 1rem 4rem;
+  color: #0e1320;
+}
+
+.app-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.65rem;
+  color: #6f7a99;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: #5c637f;
+  margin-top: 0.15rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.converter-card,
+.trend-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(16, 24, 40, 0.08);
+  padding: 1.75rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.converter-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #4b4f68;
+  gap: 0.35rem;
+}
+
+select,
+input {
+  padding: 0.65rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid #dfe3f1;
+  font-size: 1rem;
+  background: #f9fbff;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #5b78ff;
+  box-shadow: 0 0 0 3px rgba(91, 120, 255, 0.15);
+}
+
+button.cta {
+  grid-column: 1 / -1;
+  padding: 0.9rem;
+  border-radius: 14px;
+  border: none;
+  background: #5b78ff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+button.cta:disabled {
+  background: #a4b2ff;
+  cursor: not-allowed;
+}
+
+button.cta:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+button.ghost-button {
+  border: 1px solid #dfe3f1;
+  background: transparent;
+  color: #2b2f45;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rate-summary {
+  background: #f6f7ff;
+  border: 1px solid #e3e7ff;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.rate-summary strong {
+  font-size: 1rem;
+}
+
+.rate-summary p {
+  font-size: 1.1rem;
+  margin: 0.4rem 0 0;
+}
+
+.rate-summary small {
+  color: #5c637f;
+}
+
+.error {
+  color: #b52222;
+  margin: 0.5rem 0;
+}
+
+.trend-card .trend-content {
+  min-height: 280px;
+}
+
+.trend-chart {
+  height: 280px;
+}
+
+.trend-subtitle {
+  color: #5a6284;
+  font-size: 0.9rem;
+}
+
+.trend-placeholder {
+  color: #7c82a4;
+  font-size: 0.95rem;
+}
+
+.history-list {
+  margin-top: 1.25rem;
+  border-top: 1px solid #eef1ff;
+  padding-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.history-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: "SFMono-Regular", "Courier New", monospace;
+  color: #2b2f45;
+}
+
+@media (max-width: 600px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  button.cta {
+    width: 100%;
+  }
+}
